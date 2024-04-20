@@ -36,18 +36,20 @@
             // 
             // lstvData
             // 
-            lstvData.Location = new Point(25, 111);
+            lstvData.Location = new Point(10, 83);
+            lstvData.Margin = new Padding(3, 2, 3, 2);
             lstvData.Name = "lstvData";
-            lstvData.Size = new Size(894, 475);
+            lstvData.Size = new Size(963, 508);
             lstvData.TabIndex = 0;
             lstvData.UseCompatibleStateImageBehavior = false;
             lstvData.View = View.Details;
             // 
             // BtnOpen
             // 
-            BtnOpen.Location = new Point(12, 23);
+            BtnOpen.Location = new Point(10, 17);
+            BtnOpen.Margin = new Padding(3, 2, 3, 2);
             BtnOpen.Name = "BtnOpen";
-            BtnOpen.Size = new Size(148, 70);
+            BtnOpen.Size = new Size(130, 52);
             BtnOpen.TabIndex = 1;
             BtnOpen.Text = "Open";
             BtnOpen.UseVisualStyleBackColor = true;
@@ -55,16 +57,18 @@
             // 
             // TxtArtist
             // 
-            TxtArtist.Location = new Point(259, 45);
+            TxtArtist.Location = new Point(227, 34);
+            TxtArtist.Margin = new Padding(3, 2, 3, 2);
             TxtArtist.Name = "TxtArtist";
-            TxtArtist.Size = new Size(125, 27);
+            TxtArtist.Size = new Size(110, 23);
             TxtArtist.TabIndex = 2;
             // 
             // BtnArtist
             // 
-            BtnArtist.Location = new Point(429, 34);
+            BtnArtist.Location = new Point(375, 26);
+            BtnArtist.Margin = new Padding(3, 2, 3, 2);
             BtnArtist.Name = "BtnArtist";
-            BtnArtist.Size = new Size(129, 48);
+            BtnArtist.Size = new Size(113, 36);
             BtnArtist.TabIndex = 3;
             BtnArtist.Text = "Artist";
             BtnArtist.UseVisualStyleBackColor = true;
@@ -72,13 +76,14 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(957, 614);
+            ClientSize = new Size(985, 602);
             Controls.Add(BtnArtist);
             Controls.Add(TxtArtist);
             Controls.Add(BtnOpen);
             Controls.Add(lstvData);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);

@@ -40,7 +40,6 @@ namespace Conteneter
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "CSV Files|*.csv";
-            string artist = TxtArtist.Text;
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
@@ -57,19 +56,22 @@ namespace Conteneter
                     lstvData.Columns.Add(header);
                 }
 
+                string artist = TxtArtist.Text.Trim(); // Obtener el nombre del artista ingresado por el usuario
+
                 // Search for rows related to the artist
-                foreach (string line in lines.Skip(1)) // Skip the header line
+                for (int i = 1; i < lines.Length; i++) // Empezamos desde 1 para omitir la línea de encabezado
                 {
-                    string[] fields = line.Split(',');
+                    string[] fields = lines[i].Split(',');
 
                     // Check if the first field (assuming it's the artist name) matches the searched artist
-                    if (fields.Length > 0 && fields[0] == artist)
+                    if (fields.Length > 0 && fields[2].Trim() == artist)
                     {
                         ListViewItem lvi = new ListViewItem(fields);
                         lstvData.Items.Add(lvi);
                     }
                 }
             }
+
         }
     }
 }
