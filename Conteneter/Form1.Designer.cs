@@ -32,6 +32,11 @@
             BtnOpen = new Button();
             TxtArtist = new TextBox();
             BtnArtist = new Button();
+            DateSearchBtn = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // lstvData
@@ -39,7 +44,7 @@
             lstvData.Location = new Point(10, 83);
             lstvData.Margin = new Padding(3, 2, 3, 2);
             lstvData.Name = "lstvData";
-            lstvData.Size = new Size(963, 508);
+            lstvData.Size = new Size(1059, 508);
             lstvData.TabIndex = 0;
             lstvData.UseCompatibleStateImageBehavior = false;
             lstvData.View = View.Details;
@@ -57,7 +62,7 @@
             // 
             // TxtArtist
             // 
-            TxtArtist.Location = new Point(227, 34);
+            TxtArtist.Location = new Point(180, 34);
             TxtArtist.Margin = new Padding(3, 2, 3, 2);
             TxtArtist.Name = "TxtArtist";
             TxtArtist.Size = new Size(110, 23);
@@ -65,7 +70,7 @@
             // 
             // BtnArtist
             // 
-            BtnArtist.Location = new Point(375, 26);
+            BtnArtist.Location = new Point(296, 25);
             BtnArtist.Margin = new Padding(3, 2, 3, 2);
             BtnArtist.Name = "BtnArtist";
             BtnArtist.Size = new Size(113, 36);
@@ -74,11 +79,61 @@
             BtnArtist.UseVisualStyleBackColor = true;
             BtnArtist.Click += BtnArtist_Click;
             // 
+            // DateSearchBtn
+            // 
+            DateSearchBtn.Location = new Point(510, 25);
+            DateSearchBtn.Margin = new Padding(3, 2, 3, 2);
+            DateSearchBtn.Name = "DateSearchBtn";
+            DateSearchBtn.Size = new Size(113, 36);
+            DateSearchBtn.TabIndex = 4;
+            DateSearchBtn.Text = "Search for date";
+            DateSearchBtn.UseVisualStyleBackColor = true;
+            DateSearchBtn.Click += DateSearchBtn_Click;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(755, 6);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(80, 23);
+            dateTimePicker1.TabIndex = 5;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.Location = new Point(755, 46);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(80, 23);
+            dateTimePicker2.TabIndex = 6;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label1.Location = new Point(651, 12);
+            label1.Name = "label1";
+            label1.Size = new Size(72, 17);
+            label1.TabIndex = 7;
+            label1.Text = "earliest date";
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label2.Location = new Point(651, 52);
+            label2.Name = "label2";
+            label2.Size = new Size(72, 17);
+            label2.TabIndex = 8;
+            label2.Text = "last date";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(985, 602);
+            ClientSize = new Size(1081, 602);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(dateTimePicker2);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(DateSearchBtn);
             Controls.Add(BtnArtist);
             Controls.Add(TxtArtist);
             Controls.Add(BtnOpen);
@@ -96,5 +151,10 @@
         private Button BtnOpen;
         private TextBox TxtArtist;
         private Button BtnArtist;
+        private Button DateSearchBtn;
+        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePicker2;
+        private Label label1;
+        private Label label2;
     }
 }
